@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chainz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Chainz</h1>
+      <div class="category">Category: <span id="category-name"></span></div>
+      <div class="timer">Time Left: <span id="timer">02:00</span></div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <input type="text" id="word-input" placeholder="Enter a word..." autofocus />
+      <button id="submit-word">Submit</button>
+      <button id="delete-word">Delete Previous Word</button>
+      <div class="word-list" id="word-list"></div>
+      <div class="result-message" id="result-message"></div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
