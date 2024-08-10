@@ -7,17 +7,31 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="navigation">
+      <div class="container">
+        <div class="game-title">Letter Chain</div>
+        <a href="#" class="rules-link">Rules</a>
+      </div>
+    </div>
+
     <div class="game-container">
-      <h1>Word Chain Game</h1>
-      <div class="category">Category: <span id="category-name"></span></div>
       <div class="timer">Time Left: <span id="timer">02:00</span></div>
+      <div class="category">Category: <span id="category-name"></span></div>
       <div class="score">Score: <span id="score">0</span></div>
+      <div class="word-list" id="word-list"></div>
       <input type="text" id="word-input" placeholder="Enter a word..." autofocus />
       <button id="submit-word">Submit</button>
-      <button id="delete-word">Delete Previous Word</button>
-      <div class="word-list" id="word-list"></div>
       <div class="result-message" id="result-message"></div>
     </div>
+
+    <div id="rules" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Game Rules</h2>
+        <p>Here are the rules of the game...</p>
+      </div>
+    </div>
+
     <script src="game.js"></script>
   </body>
 </html>
