@@ -135,6 +135,7 @@ header {
   font-size: 18px;
   cursor: pointer;
   color: #000000;
+  text-align: center;
 }
 
 .key:hover {
