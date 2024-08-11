@@ -67,11 +67,12 @@ header {
 }
 
 .category {
-  margin-top: 15px;
+  margin: 12px;
   padding: 10px 20px;
   border: 1px solid #000000;
   border-radius: 30px;
   font-size: 18px;
+  text-align: center;
 }
 
 .category span {
@@ -84,6 +85,8 @@ header {
   display: flex;
   flex-direction: column; /* Add new items to the bottom */
   margin-top: 30px;
+  margin-left: 12px;
+  margin-right: 12px;
   width: 100%;
 }
 
@@ -113,6 +116,7 @@ header {
   width: 100%;
   font-size: 36px;
   font-weight: bold;
+  margin-left: 12px;
   border: none;
   outline: none;
   text-transform: uppercase; /* Forces uppercase letters */
@@ -201,6 +205,6 @@ header {
 
   .nav-left,
   .nav-right a {
-    font-size: 18px; /* Slightly smaller font for mobile */
+    font-size: 14px; /* Slightly smaller font for mobile */
   }
 }
