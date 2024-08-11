@@ -23,7 +23,6 @@ header {
 .header-container {
   max-width: 1080px; /* Max breakpoint for the content inside the header */
   margin: 0 auto; /* Center the content inside the header */
-  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -116,6 +115,7 @@ header {
   border: none;
   outline: none;
   text-transform: uppercase; /* Forces uppercase letters */
+  text-align: left;
 }
 
 .keyboard {
