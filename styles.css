@@ -7,6 +7,9 @@ body {
   align-items: center;
   background-color: #ffffff;
   color: #000000;
+  overflow-x: hidden;
+  touch-action: manipulation;
+  touch-action: disable-dbl-tap-zoom;
 }
 
 header {
