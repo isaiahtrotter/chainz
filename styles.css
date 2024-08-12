@@ -204,10 +204,6 @@ header {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  .header-container {
-    padding: 8px 12px 8px 12px;
-  }
-
   body {
     overflow-x: hidden;
   }
