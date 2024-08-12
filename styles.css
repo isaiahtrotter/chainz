@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   touch-action: manipulation;
   touch-action: disable-dbl-tap-zoom;
-  overflow-y: hidden;
+  /* overflow-y: hidden; prevents vertical scrolling */
 }
 
 header {
@@ -165,7 +165,6 @@ header {
 
 .highlight-key {
   background-color: #fbb03b;
-  color: #ffffff;
 }
 
 .enter-key {

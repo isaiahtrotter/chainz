@@ -1,6 +1,6 @@
 // Array of category files with their paths
 const categoryFiles = [
-  { name: "Animals", file: "categories/animals.json" },
+  //{ name: "Animals", file: "categories/animals.json" },
   { name: "US Capitals", file: "categories/us_capitals.json" },
 ];
 
@@ -10,6 +10,7 @@ let previousWord = ""; // Store the previous word for comparison
 let totalScore = 0; // Track total score
 let wordHistory = []; // Track added words and their scores
 let guessedWords = new Set(); // Track words that have already been guessed
+let currentlyHighlightedKey = null; // Track the currently highlighted key
 
 // Function to load a JSON file and set the current category and words
 function loadCategory(categoryFile) {
@@ -53,6 +54,7 @@ function submitWord() {
     const score = calculateScore(word);
     addWordToList(word, score); // Add word with calculated score
     updateTotalScore(score); // Update the total score in the UI
+    highlightLastLetterKey(word.slice(-1)); // Highlight the last letter key
     previousWord = word; // Update previous word for next comparison
     guessedWords.add(word); // Mark the word as guessed
     input.value = ""; // Clear the input after submission
@@ -188,6 +190,21 @@ function updateTotalScore(score) {
   document.querySelector(".total-score").textContent = totalScore;
 }
 
+// Function to highlight the key corresponding to the last letter of the word
+function highlightLastLetterKey(lastLetter) {
+  // Remove highlight from the previously highlighted key
+  if (currentlyHighlightedKey) {
+    currentlyHighlightedKey.classList.remove("highlight-key");
+  }
+
+  // Find the key corresponding to the last letter and highlight it
+  const key = document.querySelector(`.key[data-key="${lastLetter.toUpperCase()}"]`);
+  if (key) {
+    key.classList.add("highlight-key");
+    currentlyHighlightedKey = key; // Update the currently highlighted key
+  }
+}
+
 // Countdown timer function
 function startCountdown(duration, display) {
   let timer = duration,
@@ -247,7 +264,7 @@ document.getElementById("wordInput").addEventListener("keydown", function (event
 // Start the game by selecting a random category and starting the countdown
 window.onload = function () {
   selectRandomCategory(); // Load a random category
-  const timer = 90; // 2 minutes in seconds
+  const timer = 90; // 1.5 minutes in seconds
   const display = document.querySelector(".timer");
   startCountdown(timer, display);
 };

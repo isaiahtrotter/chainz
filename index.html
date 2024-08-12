@@ -7,10 +7,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -34,6 +30,7 @@
         <div class="score-container">
           <div class="score-tally">Score: <span class="total-score">0</span></div>
         </div>
+
         <div class="category">Category: <span></span></div>
 
         <div class="words" id="wordsList">
@@ -42,48 +39,49 @@
 
         <!-- The input field for the next word -->
         <div class="word-item">
-          <input type="text" class="word-input" id="wordInput" maxlength="10" inputmode="none" />
+          <input type="text" class="word-input" id="wordInput" maxlength="14" inputmode="none" />
         </div>
 
         <div class="keyboard">
           <div class="keyboard-row">
-            <button class="key" onclick="inputKey('Q')">Q</button>
-            <button class="key" onclick="inputKey('W')">W</button>
-            <button class="key" onclick="inputKey('E')">E</button>
-            <button class="key" onclick="inputKey('R')">R</button>
-            <button class="key" onclick="inputKey('T')">T</button>
-            <button class="key" onclick="inputKey('Y')">Y</button>
-            <button class="key" onclick="inputKey('U')">U</button>
-            <button class="key" onclick="inputKey('I')">I</button>
-            <button class="key" onclick="inputKey('O')">O</button>
-            <button class="key" onclick="inputKey('P')">P</button>
+            <button class="key" data-key="Q" onclick="inputKey('Q')">Q</button>
+            <button class="key" data-key="W" onclick="inputKey('W')">W</button>
+            <button class="key" data-key="E" onclick="inputKey('E')">E</button>
+            <button class="key" data-key="R" onclick="inputKey('R')">R</button>
+            <button class="key" data-key="T" onclick="inputKey('T')">T</button>
+            <button class="key" data-key="Y" onclick="inputKey('Y')">Y</button>
+            <button class="key" data-key="U" onclick="inputKey('U')">U</button>
+            <button class="key" data-key="I" onclick="inputKey('I')">I</button>
+            <button class="key" data-key="O" onclick="inputKey('O')">O</button>
+            <button class="key" data-key="P" onclick="inputKey('P')">P</button>
           </div>
           <div class="keyboard-row">
-            <button class="key" onclick="inputKey('A')">A</button>
-            <button class="key" onclick="inputKey('S')">S</button>
-            <button class="key" onclick="inputKey('D')">D</button>
-            <button class="key" onclick="inputKey('F')">F</button>
-            <button class="key" onclick="inputKey('G')">G</button>
-            <button class="key" onclick="inputKey('H')">H</button>
-            <button class="key" onclick="inputKey('J')">J</button>
-            <button class="key" onclick="inputKey('K')">K</button>
-            <button class="key" onclick="inputKey('L')">L</button>
+            <button class="key" data-key="A" onclick="inputKey('A')">A</button>
+            <button class="key" data-key="S" onclick="inputKey('S')">S</button>
+            <button class="key" data-key="D" onclick="inputKey('D')">D</button>
+            <button class="key" data-key="F" onclick="inputKey('F')">F</button>
+            <button class="key" data-key="G" onclick="inputKey('G')">G</button>
+            <button class="key" data-key="H" onclick="inputKey('H')">H</button>
+            <button class="key" data-key="J" onclick="inputKey('J')">J</button>
+            <button class="key" data-key="K" onclick="inputKey('K')">K</button>
+            <button class="key" data-key="L" onclick="inputKey('L')">L</button>
           </div>
           <div class="keyboard-row">
             <button class="key enter-key" onclick="submitWord()">⏎</button>
-            <button class="key" onclick="inputKey('Z')">Z</button>
-            <button class="key" onclick="inputKey('X')">X</button>
-            <button class="key" onclick="inputKey('C')">C</button>
-            <button class="key" onclick="inputKey('V')">V</button>
-            <button class="key" onclick="inputKey('B')">B</button>
-            <button class="key" onclick="inputKey('N')">N</button>
-            <button class="key" onclick="inputKey('M')">M</button>
+            <button class="key" data-key="Z" onclick="inputKey('Z')">Z</button>
+            <button class="key" data-key="X" onclick="inputKey('X')">X</button>
+            <button class="key" data-key="C" onclick="inputKey('C')">C</button>
+            <button class="key" data-key="V" onclick="inputKey('V')">V</button>
+            <button class="key" data-key="B" onclick="inputKey('B')">B</button>
+            <button class="key" data-key="N" onclick="inputKey('N')">N</button>
+            <button class="key" data-key="M" onclick="inputKey('M')">M</button>
             <button class="key backspace-key" onclick="backspace()">⌫</button>
           </div>
           <div class="keyboard-row">
-            <button class="key space-key" onclick="inputKey(' ')">space</button>
+            <button class="key space-key" onclick="inputKey(' ')">␣</button>
           </div>
         </div>
+
         <button id="deleteLastWordBtn" class="delete-last-word-btn">Delete Last Word</button>
       </div>
     </main>
