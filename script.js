@@ -203,10 +203,33 @@ function startCountdown(duration, display) {
     if (--timer < 0) {
       clearInterval(countdown);
       display.textContent = "0:00";
-      // Handle the end of the countdown here, e.g., end the game
-      alert("Time's up!");
+      endGame(); // End the game when time is up
     }
   }, 1000);
+}
+
+function disableAllKeys() {
+  const keys = document.querySelectorAll(".key");
+  keys.forEach((key) => {
+    key.disabled = true;
+  });
+}
+
+// Function to end the game
+function endGame() {
+  // Disable the input field
+  const input = document.getElementById("wordInput");
+  input.disabled = true;
+
+  // Disable the delete word button
+  const deleteButton = document.getElementById("deleteLastWordBtn");
+  deleteButton.disabled = true;
+
+  // Disable all keys on the on-screen keyboard
+  disableAllKeys();
+
+  // Display a message or perform any other end-of-game actions
+  alert("Time's up! Game over.");
 }
 
 // Convert input to uppercase as the user types
@@ -224,9 +247,9 @@ document.getElementById("wordInput").addEventListener("keydown", function (event
 // Start the game by selecting a random category and starting the countdown
 window.onload = function () {
   selectRandomCategory(); // Load a random category
-  const twoMinutes = 2 * 60; // 2 minutes in seconds
+  const timer = 90; // 2 minutes in seconds
   const display = document.querySelector(".timer");
-  startCountdown(twoMinutes, display);
+  startCountdown(timer, display);
 };
 
 // Attach the deleteLastWord function to the delete button

@@ -51,25 +51,29 @@ header {
   color: #cccccc;
 }
 
-.timer-score {
-  margin-top: 20px;
-  text-align: center;
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the timer content horizontally */
+  margin-bottom: 10px; /* Optional: Add space below the timer */
 }
 
 .timer-icon {
-  font-size: 24px;
-  display: inline-block;
-  animation: rotateHourglass 5s ease-in-out infinite;
+  width: 10px; /* Adjust the width as needed */
+  height: 12px; /* Adjust the height as needed */
+  margin-right: 4px; /* Space between icon and text */
 }
 
 .timer {
-  font-size: 24px;
-  margin-left: 5px;
+  font-size: 14px;
 }
 
-.score {
-  margin-top: 5px;
-  font-size: 18px;
+.score-container {
+  text-align: center; /* Center the score text */
+}
+
+.score-tally {
+  font-size: 14px;
 }
 
 .category {
@@ -77,7 +81,7 @@ header {
   margin-top: 12px;
   border: 1px solid #000000;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -96,8 +100,7 @@ header {
 
 .word-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: start;
   padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -112,8 +115,9 @@ header {
 }
 
 .score {
-  font-size: 18px;
-  color: #666666;
+  font-size: 12px;
+  color: #000000;
+  margin-left: 4px;
 }
 
 .word-input {
@@ -124,6 +128,10 @@ header {
   outline: none;
   text-transform: uppercase; /* Forces uppercase letters */
   text-align: left;
+}
+
+.word-input:disabled {
+  background-color: white;
 }
 
 .keyboard {
