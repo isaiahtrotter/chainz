@@ -134,8 +134,13 @@ function deleteLastWord() {
     // Update previousWord to the last remaining word in the history, if any
     if (wordHistory.length > 0) {
       previousWord = wordHistory[wordHistory.length - 1].element.querySelector(".word").textContent;
+      highlightLastLetterKey(previousWord.slice(-1)); // Highlight the last letter of the updated last word
     } else {
       previousWord = ""; // No previous word if history is empty
+      if (currentlyHighlightedKey) {
+        currentlyHighlightedKey.classList.remove("highlight-key"); // Remove highlight if no words left
+        currentlyHighlightedKey = null;
+      }
     }
   }
 }
