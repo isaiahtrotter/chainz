@@ -137,8 +137,8 @@ header {
 }
 
 .key {
-  width: 8%;
-  height: 54px;
+  width: 9%;
+  height: 48px;
   padding: 10px;
   margin: 0.5%;
   background-color: #f0f0f0;
@@ -160,17 +160,17 @@ header {
 }
 
 .enter-key {
-  width: 15%;
+  width: 14%;
   font-size: 12px;
 }
 
 .backspace-key {
-  width: 15%;
+  width: 14%;
 }
 
 .space-key {
-  width: 62%;
-  font-size: 12px;
+  width: 69%;
+  font-size: 15px;
 }
 
 @keyframes flash-red {
@@ -192,7 +192,7 @@ header {
 .delete-last-word-btn {
   display: block;
   margin: 20px auto;
-  padding: 16px 24px;
+  padding: 12px 24px;
   border: 1px solid #d31010;
   color: #d31010;
   background-color: white;
@@ -200,10 +200,6 @@ header {
   cursor: pointer;
   font-size: 16px;
   transition: all;
-}
-
-.delete-last-word-btn:hover {
-  background-color: rgb(252, 171, 171);
 }
 
 /* Media Query for Mobile Devices */
