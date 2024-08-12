@@ -1,7 +1,7 @@
 // Array of category files with their paths
 const categoryFiles = [
-  //{ name: "Animals", file: "categories/animals.json" },
-  { name: "US Capitals", file: "categories/us_capitals.json" },
+  { name: "Animals", file: "categories/animals.json" },
+  //{ name: "US Capitals", file: "categories/us_capitals.json" },
 ];
 
 let currentCategory = null; // Will hold the name of the selected category
