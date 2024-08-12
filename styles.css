@@ -29,6 +29,12 @@ header {
   width: 100%;
 }
 
+.main-container {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
 .nav-left {
   font-weight: bold;
   font-size: 20px;
@@ -67,8 +73,8 @@ header {
 }
 
 .category {
-  margin: 12px;
   padding: 10px 20px;
+  margin-top: 12px;
   border: 1px solid #000000;
   border-radius: 30px;
   font-size: 18px;
@@ -85,8 +91,6 @@ header {
   display: flex;
   flex-direction: column; /* Add new items to the bottom */
   margin-top: 30px;
-  margin-left: 12px;
-  margin-right: 12px;
   width: 100%;
 }
 
@@ -116,7 +120,6 @@ header {
   width: 100%;
   font-size: 36px;
   font-weight: bold;
-  margin-left: 12px;
   border: none;
   outline: none;
   text-transform: uppercase; /* Forces uppercase letters */
@@ -135,8 +138,9 @@ header {
 
 .key {
   width: 8%;
+  height: 54px;
   padding: 10px;
-  margin: 3px;
+  margin: 0.5%;
   background-color: #f0f0f0;
   border: none;
   border-radius: 4px;
@@ -162,6 +166,11 @@ header {
 
 .backspace-key {
   width: 15%;
+}
+
+.space-key {
+  width: 62%;
+  font-size: 12px;
 }
 
 @keyframes flash-red {
@@ -201,6 +210,10 @@ header {
 @media (max-width: 480px) {
   .header-container {
     padding: 8px 16px 16px 8px;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .nav-left,
