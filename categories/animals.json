@@ -43,7 +43,7 @@
   "PLATYPUS",
   "ECHIDNA",
   "TAPIR",
-  "RHINO",
+  "RHINOCEROS",
   "HIPPO",
   "CHEETAH",
   "LEOPARD",
@@ -106,5 +106,9 @@
   "DINOSUAR",
   "AARDVARK",
   "MONGOOSE",
-  "MARMOSET"
+  "MARMOSET",
+  "ROOSTER",
+  "OSTRICH",
+  "OWL",
+  "OSPREY"
 ]
